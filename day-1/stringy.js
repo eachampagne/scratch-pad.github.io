@@ -12,15 +12,30 @@
  * TIP: In JavaScript, how can we decipher the length of a String?
  * work?
  */
+
+/**
+ * I: a string
+ * O: a number representing the length of the input string
+ * C: N/A
+ * E: N/A
+ *
+ */
 function length(string) {
   // YOUR CODE BELOW HERE //
-
+	// use length property to get length and return it
+	return string.length;
   // YOUR CODE ABOVE HERE //
 }
 
 /**
  * Given an input String, return a new String forced to lowercase.
  */
+/*
+ *
+ *
+ *
+ */
+
 function toLowerCase(string) {
   // YOUR CODE BELOW HERE //
 
