@@ -136,9 +136,26 @@ function toDashCase(string) {
  * TIP: How can you use Array access to your advantage here? How can you
  *	ensure uppercase and lowercase can be compared equally?
  */
+
+/*
+ * I: a string and a character
+ * O: true if the input character matches the first character of the string (case insensitive); false otherwise
+ * C: must be case-insensitive
+ * E: N/A
+ * */
 function beginsWith(string, char) {
 	// YOUR CODE BELOW HERE //
+	//get first letter of string
+	let firstLetter = string[0];
 
+	//compare the lowercase versions of the first letter and the char - eliminates case problems
+	if (firstLetter.toLowerCase() === char.toLowerCase()) {
+		//return true if they're the same
+		return true;
+	} else {
+		//otherwise return false
+		return false;
+	}
 	// YOUR CODE ABOVE HERE //
 }
 
@@ -154,8 +171,27 @@ function beginsWith(string, char) {
  * TIP: How can you use Array access to your advantage here? How can you
  *	ensure uppercase and lowercase can be compared equally?
  */
+
+/*
+ * I: a string and a character
+ * O: true if the input character matches the last character of the string (case insensitive); false otherwise
+ * C: must be case-insensitive
+ * E: N/A
+ * */
+
 function endsWith(string, char) {
 	// YOUR CODE BELOW HERE //
+	//get last letter of string
+	let lastLetter = string[string.length - 1];
+
+	//compare the lowercase versions of the first letter and the char - eliminates case problems
+	if (lastLetter.toLowerCase() === char.toLowerCase()) {
+		//return true if they're the same
+		return true;
+	} else {
+		//otherwise return false
+		return false;
+	}
 
 	// YOUR CODE ABOVE HERE //
 }
