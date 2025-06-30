@@ -25,28 +25,65 @@ function length(string) {
 	// use length property to get length and return it
 	return string.length;
 	// YOUR CODE ABOVE HERE //
-
+}
 /**
  * Given an input String, return a new String forced to lowercase.
  */
+
 /*
- *
- *
+ * I: a string
+ * O: the input string transformed to lowercase
+ * C: Not sure if we're allowed to use toLowerCase()
+ * E: string contains letters not in the basic Latin alphabet (à, etc)
  *
  */
 
 function toLowerCase(string) {
 	// YOUR CODE BELOW HERE //
-
+	//easy way would be return string.toLowerCase()
+	//another way would be to use charcodes
+	
+	//initialize new empty string
+	let returnStr = "";
+	//create string of lowercase alphabet
+	let lowercase = "abcdefghijklmnopqrstuvwxyz";
+	//create string of uppercase alphabet
+	let uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	
+	//loop through every letter in the string. 
+	for (let i = 0; i < string.length; i++) {
+		//If it's in the uppercase string, concat the corresponding letter from the lowercase string onto returnStr
+		if (uppercase.includes(string[i])) {
+			let index = uppercase.indexOf(string[i]);
+			returnStr += (lowercase[index]);
+		} else {
+		//Otherwise, concat letter as is (lowercase letters, spaces, punctuation, etc)
+			returnStr += (string[i]);
+		}
+	}
+	//return new string
+	return returnStr;
 	// YOUR CODE ABOVE HERE //
 }
 
 /**
  * Given an input String, return a new String forced to uppercase.
  */
+
+/*
+ * I: a string
+ * O: the string coverted to uppercase
+ * C: N/A
+ * E: N/A, assuming toUpperCase() can handle special characters
+ * */
+
 function toUpperCase(string) {
 	// YOUR CODE BELOW HERE //
-
+	//since I've shown that I can write a function like this from scratch, this time I'll use the easy way
+	//although another scratch solution would be to use character codes
+	//return string coverted to upper case with toUpperCase() method
+	
+	return string.toUpperCase();
 	// YOUR CODE ABOVE HERE //
 }
 
@@ -63,9 +100,27 @@ function toUpperCase(string) {
  *
  *	See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Using_global_and_ignore_with_replace()
  */
+
+/*
+ * I: a string
+ * O: the string converted to dash case - words are lowercased and separated by hyphens
+ * C: should probably use my toLowerCase function
+ * E: words separated by something other than spaces, like underscores
+ *
+ * */
+
+
 function toDashCase(string) {
 	// YOUR CODE BELOW HERE //
-
+	
+	//convert input string to lowercase (which leaves spaces and punctuation unchanged)
+	let str = toLowerCase(string);
+	//split string on spaces
+	str = str.split(' ');
+	//join string back together with dashes
+	str = str.join('-');
+	//return string
+	return str;
 	// YOUR CODE ABOVE HERE //
 }
 
