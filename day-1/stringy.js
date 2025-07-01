@@ -277,8 +277,60 @@ function longest(stringOne, stringTwo) {
  *
  * TIP: How can we compare Strings? Is 'a' greater than or less than 'b'?
  */
+
+/*
+ * I: two strings
+ * O: an integer: 1 if the first string comes first alphabetically, -1 if the second string comes first, 0 if they're equal
+ * C: N/A
+ * E: string could contain non-alphabetic characters - numbers, punctuation, etc
+ * */
 function sortAscending(stringOne, stringTwo) {
 	// YOUR CODE BELOW HERE //
+	//convert both strings to lowercase to elimate case sensitivity problems
+	let string1Lower = stringOne.toLowerCase();
+	let string2Lower = stringTwo.toLowerCase();
+
+	//if the lowercase versions are the same, they are equal alphabetically, so return 0
+	if (string1Lower === string2Lower) {
+		return 0;
+	}
+
+	//if the two lowercase strings are not the same, compare letter by letter
+
+	//first, figure out which string is shorter so we don't try to index characters past the end of the shorter string
+	let shorterLength = Math.min(string1Lower.length, string2Lower.length);
+
+	//loop over the characters in each string
+	for (let i = 0; i < shorterLength; i++) {
+		//get the numeric character code at index i from each string
+		let charCode1 = string1Lower.charCodeAt(i);
+		let charCode2 = string2Lower.charCodeAt(i);
+
+		//A smaller charcode comes first
+		//note that this puts 0-9 and most punctuation before a-z
+		//since the function forces the alphabetic characters to lowercase, the only punctuation that would come after alphabetic characters are {|}~
+		//source: ASCII chart on Wikipedia https://en.wikipedia.org/wiki/ASCII
+		
+		//compare the two charcodes
+		if (charCode1 < charCode2) {
+			//if charCode1 is smaller, string1 comes first alphabetically, so return 1
+			return 1;
+		} else if (charCode2 < charCode1) {
+			//if charCode2 is smaller, string2 comes first, so return -1
+			return -1
+		}
+		//if the charcodes are the same, return nothing and proceed with the next iteration of the loop
+	}
+
+	//if one word runs out of letters with no tie-breaker, then the shorter word comes first alphabetically
+	//check if string1 is shorter
+	if (string1Lower.length < string2Lower.length) {
+		//if so return 1
+		return 1;
+	} else {
+		//otherwise string2 must be shorter (since if they were the same length they should have hit a tiebreaker in the for loop), so return -1
+		return -1;
+	}
 
 	// YOUR CODE ABOVE HERE //
 }
@@ -290,9 +342,65 @@ function sortAscending(stringOne, stringTwo) {
  *
  * TIP: How can we compare Strings? Is 'a' greater than or less than 'b'?
  */
+
+/*
+ * I: two strings
+ * O: an integer: -1 if the first string comes first alphabetically, 1 if the second string comes first, 0 if they're equal
+ * C: N/A
+ * E: string could contain non-alphabetic characters - numbers, punctuation, etc
+ * */
 function sortDescending(stringOne, stringTwo) {
 	// YOUR CODE BELOW HERE //
-	
+
+	// this is identical to sortAscending, except that return values of 1 and -1 are reversed
+	// you could also implement this by invoking sortAscending, then returning the negative of its return value (which would leave 0 unchanged)
+
+	//convert both strings to lowercase to elimate case sensitivity problems
+	let string1Lower = stringOne.toLowerCase();
+	let string2Lower = stringTwo.toLowerCase();
+
+	//if the lowercase versions are the same, they are equal alphabetically, so return 0
+	if (string1Lower === string2Lower) {
+		return 0;
+	}
+
+	//if the two lowercase strings are not the same, compare letter by letter
+
+	//first, figure out which string is shorter so we don't try to index characters past the end of the shorter string
+	let shorterLength = Math.min(string1Lower.length, string2Lower.length);
+
+	//loop over the characters in each string
+	for (let i = 0; i < shorterLength; i++) {
+		//get the numeric character code at index i from each string
+		let charCode1 = string1Lower.charCodeAt(i);
+		let charCode2 = string2Lower.charCodeAt(i);
+
+		//A smaller charcode comes first
+		//note that this puts 0-9 and most punctuation before a-z
+		//since the function forces the alphabetic characters to lowercase, the only punctuation that would come after alphabetic characters are {|}~
+		//source: ASCII chart on Wikipedia https://en.wikipedia.org/wiki/ASCII
+		
+		//compare the two charcodes
+		if (charCode1 < charCode2) {
+			//if charCode1 is smaller, string1 comes first alphabetically, so return 1
+			return -1;
+		} else if (charCode2 < charCode1) {
+			//if charCode2 is smaller, string2 comes first, so return -1
+			return 1
+		}
+		//if the charcodes are the same, return nothing and proceed with the next iteration of the loop
+	}
+
+	//if one word runs out of letters with no tie-breaker, then the shorter word comes first alphabetically
+	//check if string1 is shorter
+	if (string1Lower.length < string2Lower.length) {
+		//if so return 1
+		return -1;
+	} else {
+		//otherwise string2 must be shorter (since if they were the same length they should have hit a tiebreaker in the for loop), so return -1
+		return 1;
+	}
+
 	// YOUR CODE ABOVE HERE //
 }
 
