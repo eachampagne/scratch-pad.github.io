@@ -16,17 +16,25 @@
  * Given an input value, print the value to the screen using console.log().
  */
 
+/*
+ * I: a value of any type
+ * O: None
+ * C: N/A
+ * E: N/A
+ * */
+
 function print(value) {
-  // YOUR CODE BELOW HERE //
-  
-  // YOUR CODE ABOVE HERE //
+	// YOUR CODE BELOW HERE //
+	// log the input value
+	console.log(value);
+	// YOUR CODE ABOVE HERE //
 }
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if (
-  typeof process !== 'undefined' &&
-  typeof process.versions.node !== 'undefined'
+	typeof process !== 'undefined' &&
+	typeof process.versions.node !== 'undefined'
 ) {
-  // here, export any references you need for tests //
-  module.exports.print = print;
+	// here, export any references you need for tests //
+	module.exports.print = print;
 }
