@@ -22,21 +22,21 @@
  *
  * TIPS:
  *
- *   a. At what threshold does morning become afternoon? What comparison
- *      can be used to test that the hour is within the morning threshold.
- *      It's best to be consistant and use the SAME type of comparison for
- *      each threshold.
+ *	 a. At what threshold does morning become afternoon? What comparison
+ *		can be used to test that the hour is within the morning threshold.
+ *		It's best to be consistant and use the SAME type of comparison for
+ *		each threshold.
  *
- *   b. Does the last threshold even need an else-if?
+ *	 b. Does the last threshold even need an else-if?
  *
- *   c. The tests are CASE sensitive, so you MUST console.log('Good Night!') with
- *      the exact case.
+ *	 c. The tests are CASE sensitive, so you MUST console.log('Good Night!') with
+ *		the exact case.
  */
 
 function greeter(hour) {
-  // YOUR CODE BELOW HERE //
-  
-  // YOUR CODE ABOVE HERE //
+	// YOUR CODE BELOW HERE //
+	
+	// YOUR CODE ABOVE HERE //
 }
 
 /*
@@ -54,9 +54,9 @@ greeter(11);
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if (
-  typeof process !== 'undefined' &&
-  typeof process.versions.node !== 'undefined'
+	typeof process !== 'undefined' &&
+	typeof process.versions.node !== 'undefined'
 ) {
-  // here, export any references you need for tests //
-  module.exports.greeter = greeter;
+	// here, export any references you need for tests //
+	module.exports.greeter = greeter;
 }
