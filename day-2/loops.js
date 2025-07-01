@@ -10,9 +10,20 @@
  * Given an input Array, loop forward over the Array and print its values
  * using console.log().
  */
+
+/*
+ * I: an array of values of any type
+ * O: logs the values of the array, but returns nothing
+ * C: N/A
+ * E: N/A
+ * */
 function printArrayValues(array) {
 	// YOUR CODE BELOW HERE //
-
+	// loop over the array from beginning to end
+	for (let i = 0; i < array.length; i++) {
+		//log the element at index i
+		console.log(array[i]);
+	}
 	// YOUR CODE ABOVE HERE //
 }
 
@@ -20,9 +31,20 @@ function printArrayValues(array) {
  * Given an input Array, loop backwards over the Array and print its values
  * using console.log().
  */
+
+/*
+ * I: an array of values of any type
+ * O: logs the values of the array, but returns nothing
+ * C: N/A
+ * E: N/A
+ * */
 function printArrayValuesInReverse(array) {
 	// YOUR CODE BELOW HERE //
-
+	// loop over the array from end to beginning
+	for (let i = array.length - 1; i >= 0; i--) {
+		//log the element at index i
+		console.log(array[i]);
+	}
 	// YOUR CODE ABOVE HERE //
 }
 
