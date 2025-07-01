@@ -201,9 +201,18 @@ function endsWith(string, char) {
  *
  * TIP: What's the operator to concatenate two Strings?
  */
+
+/*
+ * I: two strings
+ * O: one string that equals the two input strings concatenated together
+ * C: N/A
+ * E: N/A
+ *
+ * */
 function concat(stringOne, stringTwo) {
 	// YOUR CODE BELOW HERE //
-
+	// concatenate the input strings with the plus operator, then return the output
+	return stringOne + stringTwo;
 	// YOUR CODE ABOVE HERE //
 }
 
