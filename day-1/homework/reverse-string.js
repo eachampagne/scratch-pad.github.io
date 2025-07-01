@@ -19,9 +19,27 @@
  *	d. how do you concatenate Strings? What operator do we use?
  */
 
+/*
+ * I: a string
+ * O: the string, reversed
+ * C: N/A
+ * E: N/A
+ *
+ * */
 function reverseString(input) {
 	// YOUR CODE GOES BELOW HERE //
-	
+
+	//create empty string to collect reversed string
+	let reversed = "";
+
+	//loop over every letter in input string
+	for (let i = 0; i < input.length; i++) {
+		//concatenate the letter at index i to the beginning of reversed
+		reversed = input[i] + reversed;
+	}
+
+	//return reversed string
+	return reversed;
 	// YOUR CODE GOES ABOVE HERE //
 }
 
