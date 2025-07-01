@@ -226,10 +226,18 @@ function concat(stringOne, stringTwo) {
  * TIP: This Function pulls out all the arguments passed to it and stores them
  *	in an Array called args.
  */
+
+/*
+ * I: any number of strings
+ * O: one string composed of all input strings joined together
+ * C: N/A
+ * E: N/A
+ * */
 function join(stringOne, stringTwo) {
 	// YOUR CODE BELOW HERE //
 	var args = Array.from(arguments);
-
+	//use the array join method to join all strings together with no spacing characters, then return the result
+	return args.join("");
 	// YOUR CODE ABOVE HERE //
 }
 
