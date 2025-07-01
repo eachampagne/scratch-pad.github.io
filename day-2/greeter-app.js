@@ -33,9 +33,31 @@
  *		the exact case.
  */
 
+/*
+ * I: an integer representing an hour
+ * O: Logs a message to the console; no return statement 
+ * C: N/A
+ * E: N/A
+ *
+ * */
+
 function greeter(hour) {
 	// YOUR CODE BELOW HERE //
 	
+	//check if hour is within morning range
+	if (hour <= 11) {
+		//if so, log morning message
+		console.log("Good Morning!");
+	} else if (hour <= 16) { //otherwise check for afternoon range
+		//if so, log afternoon message
+		console.log("Good Afternoon!");
+	} else if (hour <= 21) { //otherwise check for evening range
+		//if so, log evening message
+		console.log("Good Evening!");
+	} else { //otherwise it must be night
+		//log night message
+		console.log("Good Night!");
+	}
 	// YOUR CODE ABOVE HERE //
 }
 
