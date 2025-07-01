@@ -90,9 +90,25 @@ function printObjectKeys(object) {
 /**
  * Given an input Object, return an Array containing the Object's values.
  */
+
+/*
+ * I: an object
+ * O: an array containing the object's values
+ * C: N/A
+ * E: N/A
+ * */
 function getObjectValues(object) {
 	// YOUR CODE BELOW HERE //
+	// create empty array to hold values
+	let values = [];
 
+	//use for-in loop to iterate over object's keys
+	for (let key in object) {
+		//push the value corresponding to the key to the values array
+		values.push(object[key]);
+	}
+	// return array of values
+	return values;
 	// YOUR CODE ABOVE HERE //
 }
 
@@ -100,8 +116,21 @@ function getObjectValues(object) {
  * Given an input Object, loop over the Object and print its values
  * using console.log().
  */
+
+/*
+ * I: an object
+ * O: logs the object's values, but returns nothing
+ * C: N/A
+ * E: N/A
+ * */
 function printObjectValues(object) {
 	// YOUR CODE BELOW HERE //
+
+	//use for-in loop to iterate over object's keys
+	for (let key in object) {
+		//log the value corresponding to the key
+		console.log(object[key]);
+	}
 
 	// YOUR CODE ABOVE HERE //
 }
